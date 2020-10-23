@@ -2,11 +2,11 @@
 
 This project, use a gaze detection model to control the mouse pointer of a computer. The Gaze Estimation model is used to estimate the gaze of the user's eyes and change the mouse pointer position accordingly. This project was build using the InferenceEngine API from Intel's OpenVino ToolKit. 
 More precisely the gaze estimation model take 3 inputs: - The head pose
-														- The left eye image
-														- The right eye imag
+														* The left eye image
+														* The right eye imag
 These 3 inputs are collected with remedies of 3 models: - Face Detection
-														- Head Pose Estimation
-														- Facial Landmarks Detection.
+														* Head Pose Estimation
+														* Facial Landmarks Detection.
 In order to make this project work, a pipline was build to coordinate the flow of data from the input, and then amongst the different models and finally to the mouse controller
 
 ## Getting Started
@@ -38,10 +38,10 @@ setupvars.bat
 ```
 ### Download the pre-trainde models
 
- ⋅[Face Detection Model](https://docs.openvinotoolkit.org/2020.2/_models_intel_face_detection_retail_0005_description_face_detection_retail_0005.html)
- ⋅[Facial Landmarks Detection Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
- ⋅[Head Pose Estimation Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
- ⋅[Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
+ *[Face Detection Model](https://docs.openvinotoolkit.org/2020.2/_models_intel_face_detection_retail_0005_description_face_detection_retail_0005.html)
+ *[Facial Landmarks Detection Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
+ *[Head Pose Estimation Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
+ *[Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/omz_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
 
  #### Download the models by using openVINO model downloader
  ```
