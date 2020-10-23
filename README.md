@@ -1,13 +1,16 @@
 # Computer-Pointer-Controller
 
 This project, use a gaze detection model to control the mouse pointer of a computer. The Gaze Estimation model is used to estimate the gaze of the user's eyes and change the mouse pointer position accordingly. This project was build using the InferenceEngine API from Intel's OpenVino ToolKit. 
-More precisely the gaze estimation model take 3 inputs: 							* The head pose
-														* The left eye image
-														* The right eye imag							
-e
-These 3 inputs are collected with remedies of 3 models: 							* Face Detection
-														* Head Pose Estimation
-														* Facial Landmarks Detection
+More precisely the gaze estimation model take 3 inputs: 							
+* The head pose
+* The left eye image
+* The right eye image					
+
+These 3 inputs are collected with remedies of 3 models: 							
+* Face Detection
+* Head Pose Estimation
+* Facial Landmarks Detection
+
 In order to make this project work, a pipline was build to coordinate the flow of data from the input, and then amongst the different models and finally to the mouse controller
 
 ## Getting Started
