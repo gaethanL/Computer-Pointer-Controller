@@ -31,7 +31,7 @@ Clone the  provide [repository](https://github.com/gelhteag/Computer-Pointer-Con
 
 For windows OS 
 
-on a command prompt in administrator mode add the following  line
+Open a command prompt in administrator mode add the following  line
 
 ```
 cd C:\Program Files (x86)\IntelSWTools\openvino\bin\
@@ -63,7 +63,31 @@ python /opt/intel/openvino/deployment_tools/tools/model_downloader/downloader.py
 ```
 
 ## Demo
-*TODO:* Explain how to run a basic demo of your model.
+
+Open a command prompt, using cd go to the src directory of project repo and run the main.py scrypt
+
+### For different hardware
+
+* CPU
+```
+python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail-0005 -hp_m intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 -fld_m intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 -ge_m intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 -i bin/demo.mp4 --type video
+```
+* GPU
+```
+python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail-0005 -hp_m intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 -fld_m intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 -ge_m intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 -i bin/demo.mp4 --type video -d GPU
+```
+* MYRIAD (VPU : NSC2)
+```
+python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail-0005 -hp_m intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 -fld_m intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 -ge_m intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 -i bin/demo.mp4 --type video -d MYRIAD
+```
+
+* FPGA
+```
+python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail-0005 -hp_m intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 -fld_m intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 -ge_m intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 -i bin/demo.mp4 --type video -d FPGA
+```
+[![Video output](http://img.youtube.com/vi/q6CYru56RLc/0.jpg)](https://youtu.be/q6CYru56RLc)
+
+
 
 ## Documentation
 *TODO:* Include any documentation that users might need to better understand your project code. For instance, this is a good place to explain the command line arguments that your project supports.
