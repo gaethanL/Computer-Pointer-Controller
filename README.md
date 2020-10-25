@@ -49,7 +49,7 @@ setupvars.bat
 
  #### Download the models by using openVINO model downloader
  ```
- python <openvino directory>/deployment_tools/tools/model_downloader/downloader.py --name "face-detection-retail-0005"
+python <openvino directory>/deployment_tools/tools/model_downloader/downloader.py --name "face-detection-retail-0005"
 ```
 
 ```
@@ -102,18 +102,45 @@ INT8 |![Inference: INT8](./bin/inference_time_INT8.png) | ![FPS: INT8](./bin/fra
 FP16 |![Inference: FP16](./bin/inference_time_FP16.png) | ![FPS: FP16](./bin/frame_per_sec_FP16.png) | ![Inference: FP16](./bin/loading_time_FP16.png )
 FP32 |![Inference: FP32](./bin/inference_time_FP32.png) | ![FPS: FP32](./bin/frame_per_sec_FP32.png) | ![Inference: FP32](./bin/loading_time_FP32.png)
 
+### Intel Vtune Profiler
+
+VTune [Amplifier](https://software.intel.com/content/www/us/en/develop/tools/vtune-profiler.html) is an advanced profiler that can be used to find hotspots in our application code.
+Running the app with cpu give the performance bellow which by the help of this tool give us the opportunity to improve the running time and the used of the cpu (hardaware).
+
+Top Hotspots
+    Function	Module	CPU Time
+    func@0x1e0183ef	python36.dll	0.079s
+    func@0x18009ee14	ucrtbase.dll	0.029s
+    NtWaitForSingleObject	ntdll.dll	0.024s
+    NtQueryAttributesFile	ntdll.dll	0.020s
+    NtReadFile	ntdll.dll	0.013s
+    [Others]	N/A*	0.077s
+    
+![Elapsed time of the running app](./bin/vtune_elapsed_time.png)
+![Bottom-up](./bin/vtune.png)
 
 
 
 
 ## Results
-*TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
+### Accuracy 
+
+It can be seen that the precission effectively decreases from FP32 (Single-precision floating-point format) to FP 16 (
+Half-precision floating-point format) to finish with INT8 due to the lower precision calculations.
+
+### Loading time
+
+The difference in loading time between the CPU and the GPU is significant and that regardless of the precision format.
+
+### Software performance
+
+As seen using Vtune Profiler, the improvement of the software architectur could considerably optimize the running time of the app.
 
 ## Stand Out Suggestions
-This is where you can provide information about the stand out suggestions that you have attempted.
+Improvement could be come from the optimization of the softeware using Vtune profiler and also looking at the model optimization using the DL Workbench in order to reduce the sizes of the models that can be download ![here](https://docs.openvinotoolkit.org/latest/workbench_docs_Workbench_DG_Install_Workbench.html).
 
-### Async Inference
-If you have used Async Inference in your code, benchmark the results and explain its effects on power and performance of your project.
+
 
 ### Edge Cases
-There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. Explain some of the edge cases you encountered in your project and how you solved them to make your project more robust.
+* No face on the frame -> solution : the code will run inference at the condition of a face detect 
+* Moving Mouse Pointer causing error when corner are getting (PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen) can be solved (adding : pyautogui.FAILSAFE= True)
