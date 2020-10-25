@@ -137,7 +137,7 @@ The difference in loading time between the CPU and the GPU is significant and th
 As seen using Vtune Profiler, the improvement of the software architectur could considerably optimize the running time of the app.
 
 ## Stand Out Suggestions
-Improvement could be come from the optimization of the softeware using Vtune profiler and also looking at the model optimization using the DL Workbench in order to reduce the sizes of the models that can be download ![here](https://docs.openvinotoolkit.org/latest/workbench_docs_Workbench_DG_Install_Workbench.html).
+Improvement could be come from the optimization of the softeware using Vtune profiler and also looking at the model optimization using the DL Workbench in order to reduce the sizes of the models that can be download [here](https://docs.openvinotoolkit.org/latest/workbench_docs_Workbench_DG_Install_Workbench.html).
 
 
 
