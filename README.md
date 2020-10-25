@@ -93,7 +93,20 @@ python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail
 *TODO:* Include any documentation that users might need to better understand your project code. For instance, this is a good place to explain the command line arguments that your project supports.
 
 ## Benchmarks
-*TODO:* Include the benchmark results of running your model on multiple hardwares and multiple model precisions. Your benchmarks can include: model loading time, input/output processing time, model inference time etc.
+
+### Intel(R) Core(TM) i7-7500 CPU @ 2.70GHz 2.90GHZ
+
+
+Inline-style: 
+![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/bin/loading_time.png "loading model time")
+
+Inline-style: 
+![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/bin/frame_per_sec.png "frame per second")
+
+Inline-style: 
+![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/bin/inference_time.png "inference time")
+
+
 
 ## Results
 *TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
