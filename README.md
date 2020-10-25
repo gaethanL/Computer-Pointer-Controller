@@ -96,39 +96,14 @@ python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail
 
 ### Intel(R) Core(TM) i7-7500 CPU @ 2.70GHz 2.90GHZ
 
-#### FP16
-
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/loading_time.png "loading model time")
-
- 
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/frame_per_sec.png "frame per second")
-
-
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/inference_time.png "inference time")
-
----
-
-#### FP32
-
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/loading_time_FP32.png "loading model time")
-
- 
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/frame_per_sec_FP32.png "frame per second")
+Precision| Inference Time | FPS | Model Loading Time
+| ------------- | ------------- | ------------- | -------------
+INT8 |![Inference: INT8](./bin/inference_time_INT8.png) | ![FPS: INT8](./bin/frame_per_sec.png_INT8.png) | ![Inference: INT8](./bin/loading_time.png _INT8.png)
+FP16 |![Inference: FP16](./bin/inference_time.png) | ![FPS: FP16](./bin/frame_per_sec.png.png) | ![Inference: FP16](./bin/loading_time.png )
+FP32 |![Inference: FP32](./bin/inference_time_FP32.png) | ![FPS: FP32](./bin/frame_per_sec.png_FP32.png) | ![Inference: FP32](./bin/loading_time_FP32.png)
 
 
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/inference_time_FP32.png "inference time")
 
----
-
-##### INT8
-
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/loading_time_INT8.png "loading model time")
-
- 
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/frame_per_sec_INT8.png "frame per second")
-
-
-![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/inference_time_INT8.png "inference time")
 
 
 ## Results
