@@ -116,8 +116,8 @@ Top Hotspots
     NtReadFile	ntdll.dll	0.013s
     [Others]	N/A*	0.077s
     
-![Elapsed time of the running app](./bin/vtune_elapsed_time.png)
-![Bottom-up](./bin/vtune.png)
+![Elapsed time of the running app](./bin/vtune_elapsed_time.PNG)
+![Bottom-up](./bin/vtune.PNG)
 
 
 
