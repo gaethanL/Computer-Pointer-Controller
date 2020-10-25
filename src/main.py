@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-@author: Gaethan Legrand
-"""
+
 import os
 import sys
 import time
@@ -153,10 +151,8 @@ def infer_on_stream(args):
             cv2.namedWindow(infer_img)        # Create a named window
             cv2.moveWindow(infer_img, 10,200)  # Move it to (10,200)
             cv2.imshow(infer_img,cv2.resize(image_proccess,(600,600)))
-          
-
-            if frames%5==0:
-                    mouse.move(mouse_coord[0],mouse_coord[1])
+            
+            mouse.move(mouse_coord[0],mouse_coord[1])
     
     total_inference_time=time.time() - start_inf_time
     fps=int(frames)/(total_inference_time)
