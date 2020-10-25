@@ -98,13 +98,13 @@ python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail
 
 
 Inline-style: 
-![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/loading_time.png "loading model time")
+![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/loading_time.png "loading model time")
 
 Inline-style: 
-![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/frame_per_sec.png "frame per second")
+![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/frame_per_sec.png "frame per second")
 
 Inline-style: 
-![alt text]https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/inference_time.png "inference time")
+![alt text](https://github.com/gelhteag/Computer-Pointer-Controller/blob/main/bin/inference_time.png "inference time")
 
 
 
