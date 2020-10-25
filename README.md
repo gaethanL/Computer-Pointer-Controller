@@ -98,7 +98,7 @@ python main.py -fd_m intel/face-detection-retail-0005/FP32/face-detection-retail
 
 Precision| Inference Time | FPS | Model Loading Time
 | ------------- | ------------- | ------------- | -------------
-INT8 |![Inference: INT8](./bin/inference_time_INT8.png) | ![FPS: INT8](./bin/frame_per_sec_INT8.png) | ![Inference: INT8](./bin/loading_time.png _INT8.png)
+INT8 |![Inference: INT8](./bin/inference_time_INT8.png) | ![FPS: INT8](./bin/frame_per_sec_INT8.png) | ![Inference: INT8](./bin/loading_time_INT8.png)
 FP16 |![Inference: FP16](./bin/inference_time.png) | ![FPS: FP16](./bin/frame_per_sec.png) | ![Inference: FP16](./bin/loading_time.png )
 FP32 |![Inference: FP32](./bin/inference_time_FP32.png) | ![FPS: FP32](./bin/frame_per_sec_FP32.png) | ![Inference: FP32](./bin/loading_time_FP32.png)
 
