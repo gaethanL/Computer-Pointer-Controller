@@ -111,6 +111,7 @@ Argument|Type|Description
 - bin folder contains the media files.
 - src folder contains the python scripts.
 - readme file contain the description of the project and the how to used.
+- requirement file contain the correct versions of the required Python libraries to run the app. 
 
 ## Benchmarks
 
