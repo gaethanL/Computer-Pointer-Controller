@@ -78,17 +78,25 @@ def infer_on_stream(args):
     
    
     face_detector=Model_Face_Detect(model_name=face_detector_path,device=device,extensions=extension)
+    log.info("face_detector object intitialised")
     face_landmark_detector=Model_Facial_Land(model_name=facial_landmark_path,device=device,extensions=extension)
+    log.info("face_landmark_detector object initialised")
     head_pose_estimation=Model_HeadPos(model_name=head_pose_path,device=device,extensions=extension)
+    log.info("head_pose_estimation object initialised")
     gaze_estimation=Model_Gaze_Est(model_name=gaze_est_path,device=device,extensions=extension)
+    log.info("gaze_estimation object initialised")
     
     model_loading=time.time()
 
     start_time=time.time()
     face_detector.load_model()
+    log.info("Face Detector Model Loaded...")
     face_landmark_detector.load_model()
+    log.info("Facial Landmark Model Loaded...")
     head_pose_estimation.load_model()
+    log.info("Head Pose Estimation Model Loaded...")
     gaze_estimation.load_model()
+    log.info("Gaze Estimation Model Loaded...")
     total_models_load_time=time.time()-start_time 
   
 
